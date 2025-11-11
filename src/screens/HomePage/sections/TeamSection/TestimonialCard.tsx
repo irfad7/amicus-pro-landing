@@ -49,7 +49,7 @@ export const TestimonialCard = ({
   ].filter((stat): stat is Stat => Boolean(stat && stat.value.trim() !== ""));
 
   const ImageComponent = () => (
-    <div className="relative w-[400px] h-[450px] flex-shrink-0 flex flex-col items-center justify-center group">
+    <div className="relative w-[340px] h-[400px] flex-shrink-0 flex flex-col items-center justify-center group">
       {imageSrc ? (
         <div className="flex flex-col justify-center items-center w-full h-full">
           <img
@@ -59,14 +59,14 @@ export const TestimonialCard = ({
             draggable={false}
           />
                     <div className="mt-4 text-center">
-            <div className="[font-family:'Playfair_Display',serif] font-semibold text-[#0e823e] text-[28px] leading-[36px] tracking-wide">
+            <div className="[font-family:'Playfair_Display',serif] font-semibold text-[#0e823e] text-[24px] leading-[32px] tracking-wide">
               {name}
             </div>
-            <div className="[font-family:'Playfair_Display',serif] font-medium text-[#4d5256] text-[22px] leading-[30px] mt-1">
+            <div className="[font-family:'Playfair_Display',serif] font-medium text-[#4d5256] text-[20px] leading-[28px] mt-1">
               {location}
             </div>
             {caseStudyCategory && (
-              <div className="[font-family:'Playfair_Display',serif] font-medium text-[#4d5256] text-[18px] leading-[24px] mt-2 italic">
+              <div className="[font-family:'Playfair_Display',serif] font-medium text-[#4d5256] text-[16px] leading-[22px] mt-2 italic">
                 {caseStudyCategory}
               </div>
             )}
@@ -113,28 +113,28 @@ export const TestimonialCard = ({
 
                         {/* Name and Location - Outside image container */}
             <div className="text-center w-full mb-8">
-              <div className="[font-family:'Playfair_Display',serif] font-semibold text-[#0e823e] text-xl leading-tight tracking-wide">
+              <div className="[font-family:'Playfair_Display',serif] font-semibold text-[#0e823e] text-lg leading-tight tracking-wide">
                 {name}
               </div>
-              <div className="[font-family:'Playfair_Display',serif] font-medium text-[#4d5256] text-base leading-tight mt-2">
+              <div className="[font-family:'Playfair_Display',serif] font-medium text-[#4d5256] text-sm leading-tight mt-2">
                 {location}
               </div>
               {caseStudyCategory && (
-                <div className="[font-family:'Playfair_Display',serif] font-medium text-[#4d5256] text-sm leading-tight mt-2 italic">
+                <div className="[font-family:'Playfair_Display',serif] font-medium text-[#4d5256] text-xs leading-tight mt-2 italic">
                   {caseStudyCategory}
                 </div>
               )}
             </div>
 
             <div className="flex-1 space-y-6 w-full">
-              <div className="[font-family:'Playfair_Display',serif] font-medium text-[#0c0c0c] text-3xl tracking-[-0.5px] leading-tight text-center"
+              <div className="[font-family:'Playfair_Display',serif] font-medium text-[#0c0c0c] text-2xl tracking-[-0.5px] leading-tight text-center"
                 dangerouslySetInnerHTML={{ 
                   __html: achievement.startsWith('$') ? formatCurrency(achievement) : achievement 
                 }}
               >
               </div>
 
-              <div className="[font-family:'Playfair_Display',serif] font-normal text-[#4d5256] text-base leading-relaxed italic text-center">
+              <div className="[font-family:'Playfair_Display',serif] font-normal text-[#4d5256] text-sm leading-relaxed italic text-center">
                 {quote.includes("Success isn't about doing everything at once") || quote.includes("Precision beats guesswork") || quote.includes("Stopped guessing and started following the process") || quote.includes("Signed 15 new cases in just 4 weeks") ? (
                   <>{quote}</>
                 ) : (
@@ -150,7 +150,7 @@ export const TestimonialCard = ({
                 {displayStats.map((stat, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-3 [font-family:'Playfair_Display',serif] text-base leading-relaxed"
+                    className="flex items-start gap-3 [font-family:'Playfair_Display',serif] text-sm leading-relaxed"
                   >
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-[#4d5256] font-medium">{stat.label}: </span>
@@ -171,18 +171,18 @@ export const TestimonialCard = ({
         </div>
 
         {/* Desktop Layout - Original two-column design */}
-        <div className="hidden lg:flex items-center gap-[70px] p-[50px]">
+        <div className="hidden lg:flex items-center gap-14 p-12">
           {imagePosition === "left" && <ImageComponent />}
 
           <div className="flex-1 space-y-8">
-            <div className="[font-family:'Playfair_Display',serif] font-medium text-[#0c0c0c] text-[48px] tracking-[-0.5px] leading-[56px]"
+            <div className="[font-family:'Playfair_Display',serif] font-medium text-[#0c0c0c] text-[38px] tracking-[-0.5px] leading-[46px]"
               dangerouslySetInnerHTML={{ 
                 __html: achievement.startsWith('$') ? formatCurrency(achievement) : achievement 
               }}
             >
             </div>
 
-                                      <div className="[font-family:'Playfair_Display',serif] font-normal text-[#4d5256] text-[22px] leading-[32px] italic">
+                                      <div className="[font-family:'Playfair_Display',serif] font-normal text-[#4d5256] text-lg leading-[28px] italic">
               {quote.includes("Success isn't about doing everything at once") || quote.includes("Precision beats guesswork") || quote.includes("Stopped guessing and started following the process") || quote.includes("Signed 15 new cases in just 4 weeks") ? (
                 <>{quote}</>
               ) : (
@@ -194,11 +194,11 @@ export const TestimonialCard = ({
               )}
             </div>
 
-            <div className="pl-8 space-y-4">
+            <div className="pl-6 space-y-3">
               {displayStats.map((stat, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-4 [font-family:'Playfair_Display',serif] text-[36px] leading-[42px]"
+                  className="flex items-center gap-3 [font-family:'Playfair_Display',serif] text-[26px] leading-[32px]"
                 >
                   <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
                   <span className="text-[#4d5256] font-medium">{stat.label}: </span>

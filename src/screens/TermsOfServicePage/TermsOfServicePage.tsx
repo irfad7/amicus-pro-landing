@@ -20,7 +20,7 @@ export const TermsOfServicePage = (): JSX.Element => {
 
         {/* Main Content */}
         <div className="container mx-auto px-4 py-12 max-w-4xl">
-          <h1 className="[font-family:'Playfair_Display',serif] text-4xl md:text-5xl font-semibold text-[#0c0c0c] mb-8">
+          <h1 className="[font-family:'Playfair_Display',serif] text-3xl md:text-4xl font-semibold text-[#0c0c0c] mb-7">
             Terms of Service
           </h1>
           
@@ -30,7 +30,7 @@ export const TermsOfServicePage = (): JSX.Element => {
             </p>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 1. Acceptance of Terms
               </h2>
               <p>
@@ -39,7 +39,7 @@ export const TermsOfServicePage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 2. Use License
               </h2>
               <p>
@@ -54,7 +54,7 @@ export const TermsOfServicePage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 3. Description of Services
               </h2>
               <p>
@@ -63,7 +63,7 @@ export const TermsOfServicePage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 4. User Accounts
               </h2>
               <p>
@@ -72,7 +72,7 @@ export const TermsOfServicePage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 5. Disclaimer
               </h2>
               <p>
@@ -84,7 +84,7 @@ export const TermsOfServicePage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 6. Limitations
               </h2>
               <p>
@@ -93,7 +93,7 @@ export const TermsOfServicePage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 7. Compliance with State Bar Guidelines
               </h2>
               <p>
@@ -102,7 +102,7 @@ export const TermsOfServicePage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 8. Revisions and Errata
               </h2>
               <p>
@@ -111,7 +111,7 @@ export const TermsOfServicePage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 9. Links
               </h2>
               <p>
@@ -120,7 +120,7 @@ export const TermsOfServicePage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 10. Site Terms of Use Modifications
               </h2>
               <p>
@@ -129,7 +129,7 @@ export const TermsOfServicePage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 11. Governing Law
               </h2>
               <p>
@@ -138,7 +138,7 @@ export const TermsOfServicePage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 12. Contact Information
               </h2>
               <p>

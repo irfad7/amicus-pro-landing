@@ -651,63 +651,63 @@ export const HomePage = (): JSX.Element => {
         </nav>
       </header>
              
-      <main className="mx-auto flex max-w-7xl flex-col gap-24 px-6 pb-32 font-sans sm:px-8 lg:px-10 lg:pb-40">
-        <section className="relative overflow-hidden rounded-[40px] border border-white/10 bg-slate-950/60 px-8 pt-8 pb-20 shadow-xl shadow-green-500/10 sm:px-12 lg:px-20 lg:pt-12 lg:pb-28">
+      <main className="mx-auto flex max-w-7xl flex-col gap-16 px-6 pb-24 font-sans sm:px-8 lg:px-10 lg:pb-32">
+        <section className="relative overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/60 px-6 pt-6 pb-12 shadow-xl shadow-green-500/10 sm:px-8 lg:px-12 lg:pt-8 lg:pb-16">
           {/* Logo at top of hero section */}
-          <div className="flex justify-center mb-12 lg:mb-16">
+          <div className="flex justify-center mb-6 lg:mb-8">
             <img
               src={amicusProLogo}
               alt="Amicus Pro by My Legal Academy"
-              className="h-16 w-auto sm:h-20"
+              className="h-10 w-auto sm:h-12"
             />
           </div>
           <div className="absolute -left-24 top-16 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl" />
           <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl" />
-          <div className="relative z-10 mx-auto max-w-5xl space-y-12 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-emerald-300">
+          <div className="relative z-10 mx-auto max-w-4xl space-y-8 text-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-emerald-300">
               Introducing Amicus Pro by My Legal Academy
             </span>
-            <h1 className="font-serif text-7xl font-bold leading-[1.05] text-white sm:text-8xl lg:text-[96px] xl:text-[104px]">
+            <h1 className="font-serif text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
               The AI-Powered Command Center For Modern Law Firms
             </h1>
-            <p className="text-3xl leading-[1.6] text-slate-100 sm:text-4xl lg:text-[32px]">
+            <p className="text-lg leading-[1.6] text-slate-100 sm:text-xl lg:text-2xl">
               The next evolution of Legal Funnel—now Amicus Pro. An AI-powered platform that unifies client intake, automated follow-ups, intelligent communications, document management, and real-time reporting. Scale your practice without scaling your overhead.
             </p>
-            <ul className="mx-auto max-w-4xl space-y-8 text-left text-2xl leading-[1.7] text-slate-100 sm:text-3xl lg:text-[26px]">
+            <ul className="mx-auto max-w-3xl space-y-4 text-left text-base leading-[1.7] text-slate-100 sm:text-lg lg:text-xl">
               {[
                 "Convert more signed retainers from existing lead flow with 24/7 AI intake responses.",
                 "Unify partners, operators, and intake teams in one intelligent command center.",
                 "Track true marketing ROI, intake velocity, and revenue forecasts in real time.",
               ].map((item) => (
-                <li key={item} className="flex items-start gap-5">
-                  <span className="mt-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-green-500/25 text-lg font-bold text-green-300">
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-green-500/25 text-sm font-bold text-green-300">
                     ✓
                   </span>
                   <span className="flex-1">{item}</span>
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col gap-6 sm:flex-row sm:justify-center">
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <button
                 onClick={() => setShowDiscoveryPopup(true)}
-                className="rounded-full bg-green-600 px-16 py-6 text-center text-xl font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-green-600/25 transition hover:bg-green-500 hover:shadow-green-500/30 sm:flex-none"
+                className="rounded-full bg-green-600 px-8 py-4 text-center text-lg font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-green-600/25 transition hover:bg-green-500 hover:shadow-green-500/30 sm:flex-none"
               >
                 Book Discovery Call
               </button>
               <a
                 href="#implementation"
-                className="rounded-full border-2 border-white/30 px-16 py-6 text-center text-xl font-semibold uppercase tracking-[0.2em] text-white transition hover:border-green-400/70 hover:bg-green-600/10 hover:text-green-200 sm:flex-none"
+                className="rounded-full border-2 border-white/30 px-8 py-4 text-center text-lg font-semibold uppercase tracking-[0.2em] text-white transition hover:border-green-400/70 hover:bg-green-600/10 hover:text-green-200 sm:flex-none"
               >
                 View Implementation
               </a>
             </div>
           </div>
-          <div className="mt-24 grid gap-10 border-t border-white/15 pt-20 sm:grid-cols-3">
+          <div className="mt-12 grid gap-6 border-t border-white/15 pt-12 sm:grid-cols-3">
             {heroStats.map((stat) => (
-              <div key={stat.label} className="space-y-6 rounded-3xl border border-white/10 bg-slate-900/40 p-10 backdrop-blur-sm transition hover:bg-slate-900/60 hover:scale-105">
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-green-300">{stat.label}</p>
-                <p className="text-5xl font-black text-white lg:text-6xl">{stat.value}</p>
-                <p className="text-base leading-relaxed text-slate-200">{stat.description}</p>
+              <div key={stat.label} className="space-y-4 rounded-2xl border border-white/10 bg-slate-900/40 p-6 backdrop-blur-sm transition hover:bg-slate-900/60 hover:scale-105">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-green-300">{stat.label}</p>
+                <p className="text-3xl font-black text-white lg:text-4xl">{stat.value}</p>
+                <p className="text-sm leading-relaxed text-slate-200">{stat.description}</p>
               </div>
             ))}
           </div>

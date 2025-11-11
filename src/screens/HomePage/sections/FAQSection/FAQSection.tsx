@@ -111,20 +111,20 @@ export const FAQSection = ({ onShowEmailPopup }: FAQSectionProps): JSX.Element =
   return (
     <section className="w-full px-4 pb-5">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="[font-family:'Playfair_Display',serif] font-medium text-[#0c0c0c] text-[36px] sm:text-[42px] md:text-[56px] lg:text-[64px] tracking-[-0.5px] leading-tight mb-8">
+        <div className="text-center mb-14">
+          <h2 className="[font-family:'Playfair_Display',serif] font-medium text-[#0c0c0c] text-[32px] sm:text-[38px] md:text-[50px] lg:text-[56px] tracking-[-0.5px] leading-tight mb-6">
             Frequently Asked Questions
           </h2>
         </div>
 
-        <div className="space-y-4 mb-16">
+        <div className="space-y-4 mb-14">
           {faqData.map((faq, index) => (
             <div key={index} className="bg-white rounded-[8.05px] shadow-[0px_0px_40.25px_#002c7a1a] border-0">
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full text-left p-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full text-left p-5 flex items-center justify-between hover:bg-gray-50 transition-colors"
               >
-                <h3 className="[font-family:'Playfair_Display',serif] font-bold text-[#0c0c0c] text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] tracking-[0] leading-[1.4] pr-4">
+                <h3 className="[font-family:'Playfair_Display',serif] font-bold text-[#0c0c0c] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] tracking-[0] leading-[1.4] pr-4">
                   {faq.question}
                 </h3>
                 {openItems.includes(index) ? (
@@ -135,7 +135,7 @@ export const FAQSection = ({ onShowEmailPopup }: FAQSectionProps): JSX.Element =
               </button>
               {openItems.includes(index) && (
                 <div className="px-6 pb-6">
-                  <p className="[font-family:'Playfair_Display',serif] font-normal text-[#4d5256] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] tracking-[0] leading-[1.5]">
+                  <p className="[font-family:'Playfair_Display',serif] font-normal text-[#4d5256] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] tracking-[0] leading-[1.5]">
                     {faq.answer}
                   </p>
                 </div>
@@ -147,15 +147,15 @@ export const FAQSection = ({ onShowEmailPopup }: FAQSectionProps): JSX.Element =
         <div className="text-center">
           <Button 
             onClick={onShowEmailPopup}
-            className="h-14 md:h-16 lg:h-18 bg-[#0e823e] hover:bg-[#0c7235] text-white rounded-[3.02px] border border-[#00000021] shadow-[0px_4.03px_8.05px_#001c3826] px-8 py-6"
+            className="h-[50px] md:h-[56px] lg:h-[60px] bg-[#0e823e] hover:bg-[#0c7235] text-white rounded-[3.02px] border border-[#00000021] shadow-[0px_4.03px_8.05px_#001c3826] px-7 py-4"
           >
-            <span className="[font-family:'Playfair_Display',serif] font-medium text-[35.2px] tracking-[0] leading-[48.3px] flex items-center gap-2">
+            <span className="[font-family:'Playfair_Display',serif] font-medium text-[28px] tracking-[0] leading-[40px] flex items-center gap-2">
               See If You Qualify
-              <ArrowRight className="w-6 h-6" />
+              <ArrowRight className="w-5 h-5" />
             </span>
           </Button>
 
-          <p className="text-[#60606b] [font-family:'Playfair_Display',serif] font-medium text-[14.1px] tracking-[0] leading-[19.7px] mt-2">
+          <p className="text-[#60606b] [font-family:'Playfair_Display',serif] font-medium text-[13px] tracking-[0] leading-[18px] mt-2">
             Completely Done-For-You Case-Generation System
           </p>
         </div>

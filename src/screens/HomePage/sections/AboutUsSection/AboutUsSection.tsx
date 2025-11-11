@@ -51,7 +51,7 @@ export const AboutUsSection = ({ onShowEmailPopup }: AboutUsSectionProps): JSX.E
 
         {/* Heading */}
                   <div className="text-center mb-4 md:mb-6">
-            <h2 className="text-center text-[48px] sm:text-[52px] md:text-[56px] lg:text-[64px] font-medium leading-tight tracking-[-0.5px] text-[#0c0c0c] [font-family:'Playfair_Display',serif] pb-1">
+            <h2 className="text-center text-[40px] sm:text-[44px] md:text-[50px] lg:text-[56px] font-medium leading-tight tracking-[-0.5px] text-[#0c0c0c] [font-family:'Playfair_Display',serif] pb-1">
               Top Personal Injury Firms <br />
               Trust Redwood Meridian
             </h2>
@@ -65,28 +65,28 @@ export const AboutUsSection = ({ onShowEmailPopup }: AboutUsSectionProps): JSX.E
                 key={t.name}
                 className={`relative overflow-visible rounded-xl bg-white shadow-[0px_0px_40.25px_#002c7a21] transition-all duration-300 hover:shadow-[0px_0px_50px_#002c7a30] hover:-translate-y-2 ${index === 1 ? "origin-bottom md:scale-[0.98]" : ""}`}
               >
-                <CardContent className={`relative flex h-full flex-col items-center px-4 sm:px-6 md:px-10 lg:px-16 pt-32 sm:pt-36 md:pt-40 lg:pt-48 ${index === 1 ? "pb-0" : "pb-4 sm:pb-6 md:pb-8"}`}>
+                <CardContent className={`relative flex h-full flex-col items-center px-4 sm:px-6 md:px-8 lg:px-12 pt-28 sm:pt-32 md:pt-36 lg:pt-40 ${index === 1 ? "pb-0" : "pb-4 sm:pb-6 md:pb-8"}`}>
                   {/* headshot */}
                   <div className="absolute -top-2 sm:-top-4 md:-top-8 lg:-top-12 left-1/2 -translate-x-1/2 z-10">
                     <img
                       src={t.image}
                       alt={`${t.name} headshot`}
-                      className="h-32 w-32 sm:h-40 sm:w-40 md:h-44 md:w-44 lg:h-56 lg:w-56 object-cover rounded-full"
+                      className="h-28 w-28 sm:h-36 sm:w-36 md:h-40 md:w-40 lg:h-52 lg:w-52 object-cover rounded-full"
                       style={{ objectPosition: 'center 30%' }}
                       draggable={false}
                     />
                   </div>
 
                   {/* name + location */}
-                  <h4 className="[font-family:'Playfair_Display',serif] text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-tight text-[#0c0c0c] text-center mt-2 sm:mt-0">
+                  <h4 className="[font-family:'Playfair_Display',serif] text-lg sm:text-xl md:text-[22px] lg:text-[26px] font-semibold leading-tight text-[#0c0c0c] text-center mt-2 sm:mt-0">
                     {t.name}
                   </h4>
-                  <p className="[font-family:'Playfair_Display',serif] mt-1 text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed text-[#4d5256] text-center">
+                  <p className="[font-family:'Playfair_Display',serif] mt-1 text-sm sm:text-base md:text-lg lg:text-[20px] font-medium leading-relaxed text-[#4d5256] text-center">
                     {t.location}
                   </p>
 
                   {/* quote */}
-                  <blockquote className="[font-family:'Playfair_Display',serif] mx-auto mt-4 sm:mt-6 flex-1 text-center text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-[#4d5256]">
+                  <blockquote className="[font-family:'Playfair_Display',serif] mx-auto mt-4 sm:mt-6 flex-1 text-center text-sm sm:text-base md:text-lg lg:text-[20px] leading-relaxed text-[#4d5256]">
                     &ldquo;
                     {t.quote.includes("35 clients") ? (
                       <>

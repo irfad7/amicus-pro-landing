@@ -10,7 +10,7 @@ export const FooterSection = (): JSX.Element => {
           <CardContent className="p-0">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center">
                               <div className="flex justify-center lg:justify-start">
-                  <div className="w-full max-w-[550px] h-[300px] sm:h-[400px] lg:h-[450px] flex items-center justify-center">
+                  <div className="w-full max-w-[500px] h-[260px] sm:h-[340px] lg:h-[400px] flex items-center justify-center">
                     <div className="text-center p-4 sm:p-6 lg:p-8 relative group cursor-pointer" onClick={() => window.open('https://www.youtube.com/watch?v=d2teDjJa2MU', '_blank')}>
                       <div className="relative">
                         <img src={revenuce} alt="Stephen A. Smith testimonial video thumbnail" className="w-full h-full object-cover rounded-lg transition-transform group-hover:scale-105" draggable={false} />
@@ -25,7 +25,7 @@ export const FooterSection = (): JSX.Element => {
                 </div>
 
               <div className="space-y-4 sm:space-y-6">
-                <blockquote className="text-lg sm:text-xl lg:text-2xl xl:text-[40.3px] leading-tight lg:leading-[48.3px] tracking-[-0.81px] [font-family:'Playfair_Display',serif]">
+                <blockquote className="text-lg sm:text-xl lg:text-[26px] xl:text-[32px] leading-tight lg:leading-[38px] tracking-[-0.6px] [font-family:'Playfair_Display',serif]">
                   <span className="font-black text-[#0c0c0c] tracking-[-0.32px]">
                     "I doubled my revenue in one year, I'm literally{" "}
                   </span>
@@ -38,7 +38,7 @@ export const FooterSection = (): JSX.Element => {
                   </span>
                 </blockquote>
 
-                <cite className="block text-sm sm:text-base lg:text-lg text-[#4d5256] [font-family:'Playfair_Display',serif] font-normal leading-relaxed lg:leading-[27.2px] not-italic">
+                <cite className="block text-sm sm:text-base lg:text-[18px] text-[#4d5256] [font-family:'Playfair_Display',serif] font-normal leading-relaxed lg:leading-[26px] not-italic">
                   – Stephen A. Smith, Esq., Personal Injury Lawyer, The Law
                   Offices of Stephen A. Smith
                 </cite>

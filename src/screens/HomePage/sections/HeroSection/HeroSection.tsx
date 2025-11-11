@@ -57,16 +57,16 @@ export const HeroSection = ({ onShowEmailPopup }: HeroSectionProps): JSX.Element
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-          <header className="text-center mb-12">
+          <header className="text-center mb-10">
             <div className="mb-4">
-              <h1 className="[font-family:'Playfair_Display',serif] font-medium text-[#0c0c0c] text-[36px] sm:text-[42px] md:text-[56px] lg:text-[64px] tracking-[-0.5px] leading-tight">
+              <h1 className="[font-family:'Playfair_Display',serif] font-medium text-[#0c0c0c] text-[32px] sm:text-[38px] md:text-[48px] lg:text-[56px] tracking-[-0.5px] leading-tight">
                 More of Our Members' Voices
               </h1>
             </div>
           </header>
 
           {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[21px] mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {testimonialData.map((testimonial, index) => (
               <Card key={index} className="border-0 shadow-none bg-transparent">
                 <CardContent className="p-0">
@@ -77,7 +77,7 @@ export const HeroSection = ({ onShowEmailPopup }: HeroSectionProps): JSX.Element
                       rel="noopener noreferrer"
                       className="block cursor-pointer group"
                     >
-                      <div className="relative w-full h-[201px] rounded-[8.05px] mb-6 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-lg overflow-hidden">
+                      <div className="relative w-full h-[180px] rounded-[8.05px] mb-5 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-lg overflow-hidden">
                         <div
                           className="w-full h-full"
                           style={{
@@ -94,8 +94,8 @@ export const HeroSection = ({ onShowEmailPopup }: HeroSectionProps): JSX.Element
                         </div>
                       </div>
                     </a>
-                    <div className="text-center">
-                      <p className="[font-family:'Playfair_Display',serif] font-normal text-[#4d5256] text-[16.1px] leading-[22.5px]">
+                    <div className="text-center mt-1">
+                      <p className="[font-family:'Playfair_Display',serif] font-normal text-[#4d5256] text-[15px] leading-[21px]">
                         {testimonial.category}
                       </p>
                     </div>
@@ -106,15 +106,15 @@ export const HeroSection = ({ onShowEmailPopup }: HeroSectionProps): JSX.Element
           </div>
           
           {/* CTA Section */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-6">
             <Button 
               onClick={onShowEmailPopup}
-              className="h-14 md:h-16 lg:h-18 bg-[#0e823e] hover:bg-[#0e823e]/90 text-white text-[35.2px] leading-[48.3px] px-8 py-6 rounded-[3.02px] border border-[#00000021] shadow-[0px_4.03px_8.05px_#001c3826] [font-family:'Playfair_Display',serif] font-medium mb-4"
+              className="h-[50px] md:h-[56px] lg:h-[60px] bg-[#0e823e] hover:bg-[#0e823e]/90 text-white text-[28px] leading-[40px] px-7 py-4 rounded-[3.02px] border border-[#00000021] shadow-[0px_4.03px_8.05px_#001c3826] [font-family:'Playfair_Display',serif] font-medium mb-3"
             >
               <span className="mr-4">See If You Qualify</span>
-              <ArrowRight className="w-6 h-6" />
+              <ArrowRight className="w-5 h-5" />
             </Button>
-            <p className="[font-family:'Playfair_Display',serif] font-medium text-[#4d5256] text-[14.1px] leading-[19.7px] -mt-0.5">
+            <p className="[font-family:'Playfair_Display',serif] font-medium text-[#4d5256] text-[13px] leading-[18px] -mt-0.5">
               Completely Done-For-You Case-Generation System
             </p>
           </div>

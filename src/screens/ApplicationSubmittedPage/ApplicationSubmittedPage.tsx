@@ -37,7 +37,7 @@ export const ApplicationSubmittedPage = (): JSX.Element => {
         <div className="w-full relative">
           <div className="absolute top-4 md:top-8 left-1/2 transform -translate-x-1/2 z-10 pb-8 md:pb-12 lg:pb-16">
             <div className="flex items-center">
-              <h1 className="[font-family:'Playfair_Display',serif] font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight">
+              <h1 className="[font-family:'Playfair_Display',serif] font-bold text-3xl md:text-4xl lg:text-5xl tracking-tight">
                 <span className="text-[#0c0c0c]">Redwood</span>{' '}
                 <span className="text-[#0e823e]">Meridian</span>
               </h1>
@@ -52,14 +52,14 @@ export const ApplicationSubmittedPage = (): JSX.Element => {
             {/* Success Section */}
             <div className="text-center mb-12 md:mb-10 lg:mb-8 mt-8">
               <div className="mb-4">
-                <h1 className="[font-family:'Playfair_Display',serif] font-normal text-[#0c0c0c] text-xl md:text-2xl lg:text-3xl xl:text-4xl tracking-[-0.5px] leading-tight whitespace-nowrap flex items-center justify-center gap-3">
-                  <CheckCircle className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-green-600" />
+                <h1 className="[font-family:'Playfair_Display',serif] font-normal text-[#0c0c0c] text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-[-0.5px] leading-tight whitespace-nowrap flex items-center justify-center gap-3">
+                  <CheckCircle className="w-5 h-5 md:w-7 md:h-7 lg:w-8 lg:h-8 text-green-600" />
                   Your Application Has Been Received
                 </h1>
               </div>
               
               <div className="max-w-3xl mx-auto">
-                <p className="[font-family:'Playfair_Display',serif] font-normal text-[#0c0c0c] text-lg md:text-xl lg:text-2xl leading-relaxed mb-8">
+                <p className="[font-family:'Playfair_Display',serif] font-normal text-[#0c0c0c] text-base md:text-lg lg:text-xl leading-relaxed mb-8">
                   You're one step closer to building a predictable pipeline of 15+ new car accident clients every month.
                 </p>
               </div>
@@ -68,12 +68,12 @@ export const ApplicationSubmittedPage = (): JSX.Element => {
             {/* Next Steps Section */}
             <div className="mb-12 md:mb-10 lg:mb-8">
               <div className="text-center mb-8 md:mb-6 lg:mb-4">
-                <h2 className="[font-family:'Playfair_Display',serif] font-medium text-[#0c0c0c] text-3xl md:text-4xl lg:text-5xl tracking-[-0.5px] leading-tight mb-6">
+                <h2 className="[font-family:'Playfair_Display',serif] font-medium text-[#0c0c0c] text-2xl md:text-3xl lg:text-4xl tracking-[-0.5px] leading-tight mb-6">
                   The next step is to lock in your strategy call.
                 </h2>
                 
                 <div className="max-w-4xl mx-auto">
-                  <p className="[font-family:'Playfair_Display',serif] font-normal text-[#4d5256] text-lg md:text-xl leading-relaxed mb-8">
+                  <p className="[font-family:'Playfair_Display',serif] font-normal text-[#4d5256] text-base md:text-lg leading-relaxed mb-8">
                     This call is a working session. We'll review your current intake and marketing, show you how top personal injury firms are signing 15+ clients per month, and outline a roadmap specific to your firm. Please choose a time when all decision-makers can join.
                   </p>
                 </div>
@@ -84,8 +84,8 @@ export const ApplicationSubmittedPage = (): JSX.Element => {
                   src="https://link.legalfunnel.com/widget/booking/u7qmhdSBaONOc8fIipAv" 
                   style={{
                     width: '100%', 
-                    height: '800px',
-                    minHeight: '800px',
+                    height: '760px',
+                    minHeight: '760px',
                     border: 'none', 
                     overflow: 'visible'
                   }} 
@@ -108,7 +108,7 @@ export const ApplicationSubmittedPage = (): JSX.Element => {
           </div>
 
           {/* Address */}
-          <div className="text-center text-[#4d5256] text-sm leading-[19.6px]">
+          <div className="text-center text-[#4d5256] text-xs md:text-sm leading-[19.6px]">
             7104 Salisbury Rd.<br />
             West Hills, CA 91307
           </div>
@@ -132,7 +132,7 @@ export const ApplicationSubmittedPage = (): JSX.Element => {
 
           {/* Disclaimer */}
           <div className="text-center max-w-4xl mx-auto px-4">
-            <p className="[font-family:'Playfair_Display',serif] font-normal italic text-[#60606b] text-[14.1px] leading-[19.7px]">
+            <p className="[font-family:'Playfair_Display',serif] font-normal italic text-[#60606b] text-[13px] leading-[19px]">
               This program is subject to Redwood Meridian&apos;s prerequisites and process
               adherence. Spaces are limited. No guarantees of specific case
               outcomes. Compliance with State Bar guidelines required.

@@ -63,8 +63,8 @@ export const ServicesSection = (): JSX.Element => {
   return (
     <section className="w-full py-5 px-4">
       <div className="max-w-[1147px] mx-auto">
-        <div className="text-center mb-10">
-          <h2 className="[font-family:'Playfair_Display',serif] font-medium text-[#0c0c0c] text-[40.3px] tracking-[-0.5px] leading-[48.3px]">
+        <div className="text-center mb-9">
+          <h2 className="[font-family:'Playfair_Display',serif] font-medium text-[#0c0c0c] text-[34px] tracking-[-0.5px] leading-[42px]">
             Frequently Asked Questions
           </h2>
         </div>
@@ -77,11 +77,11 @@ export const ServicesSection = (): JSX.Element => {
                 value={item.id}
                 className="border-none"
               >
-                <AccordionTrigger className="[font-family:'Playfair_Display',serif] font-bold text-[#0c0c0c] text-[20.1px] tracking-[0] leading-[24.2px] hover:no-underline py-6 px-0">
+                <AccordionTrigger className="[font-family:'Playfair_Display',serif] font-bold text-[#0c0c0c] text-[18.5px] tracking-[0] leading-[24px] hover:no-underline py-5 px-0">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="pb-6">
-                  <div className="text-gray-600 [font-family:'Playfair_Display',serif] text-[16px] leading-[24px]">
+                  <div className="text-gray-600 [font-family:'Playfair_Display',serif] text-[15px] leading-[22px]">
                     {item.answer}
                   </div>
                 </AccordionContent>

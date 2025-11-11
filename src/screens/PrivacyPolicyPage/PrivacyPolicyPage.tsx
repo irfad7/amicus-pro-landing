@@ -20,7 +20,7 @@ export const PrivacyPolicyPage = (): JSX.Element => {
 
         {/* Main Content */}
         <div className="container mx-auto px-4 py-12 max-w-4xl">
-          <h1 className="[font-family:'Playfair_Display',serif] text-4xl md:text-5xl font-semibold text-[#0c0c0c] mb-8">
+          <h1 className="[font-family:'Playfair_Display',serif] text-3xl md:text-4xl font-semibold text-[#0c0c0c] mb-7">
             Privacy Policy
           </h1>
           
@@ -30,7 +30,7 @@ export const PrivacyPolicyPage = (): JSX.Element => {
             </p>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 1. Information We Collect
               </h2>
               <p>
@@ -48,7 +48,7 @@ export const PrivacyPolicyPage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 2. How We Use Your Information
               </h2>
               <p>We use the information we collect to:</p>
@@ -63,7 +63,7 @@ export const PrivacyPolicyPage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 3. Information Sharing and Disclosure
               </h2>
               <p>We do not sell, trade, or rent your personal information to third parties. We may share your information:</p>
@@ -76,7 +76,7 @@ export const PrivacyPolicyPage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 4. Data Security
               </h2>
               <p>
@@ -85,7 +85,7 @@ export const PrivacyPolicyPage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 5. Your Rights
               </h2>
               <p>You have the right to:</p>
@@ -99,7 +99,7 @@ export const PrivacyPolicyPage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 6. Cookies and Tracking Technologies
               </h2>
               <p>
@@ -108,7 +108,7 @@ export const PrivacyPolicyPage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 7. Children's Privacy
               </h2>
               <p>
@@ -117,7 +117,7 @@ export const PrivacyPolicyPage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 8. Changes to This Privacy Policy
               </h2>
               <p>
@@ -126,7 +126,7 @@ export const PrivacyPolicyPage = (): JSX.Element => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#0c0c0c] mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-[#0c0c0c] mb-4">
                 9. Contact Us
               </h2>
               <p>

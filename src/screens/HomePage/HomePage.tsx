@@ -9,133 +9,123 @@ import demarcusImg from "../../assets/images/mckinny.png";
 import amicusProLogo from "../../assets/images/amicus pro.svg";
 import { trackPageView } from "../../utils/analytics";
 
-const implementationPhases = [
+const serviceTiers = [
   {
-    id: 1,
-    title: "Month 1: Audit & Setup",
-    subtitle: "Foundation & Blueprint",
-    description: "Lay the foundation by auditing systems, onboarding into Amicus Pro, and installing blueprint intake automations so no leads are missed.",
-    objectives: [
-      "Complete Law Firm Growth Audit during onboarding",
-      "Personalized Intake Audit Call to optimize scripts and maximize leads",
-      "Ad Campaign Setup with Marketing Strategy Call",
-      "Amicus Pro Sign Up with Essential Intake Automations",
-      "CRM to CMS Connection via Zapier integration"
-    ],
-    outcome: "Your intake foundation is bulletproof with automated lead capture and follow-up systems in place.",
-    duration: "30 days"
+    id: "core",
+    name: "CORE Tier",
+    price: "$13,500",
+    ideal: "Firms that want to maintain their systems and handle implementation internally with guidance.",
+    featured: false,
+    services: [
+      "Access to Amicus Pro platform and existing automations",
+      "Ongoing automation updates, as needed",
+      "One (1) Monthly Intake Review",
+      "One (1) Monthly Growth Check-In",
+      "One (1) Monthly Automation Review",
+      "DIY monthly marketing templates and creative assets",
+      "Biweekly ad reporting and performance calls"
+    ]
   },
   {
-    id: 2,
-    title: "Month 2: Launch",
-    subtitle: "Go Live & Optimize",
-    description: "Launch ads and intake campaigns, train the intake team, and begin optimizing lead flow to ensure steady, trackable results.",
-    objectives: [
-      "Technical Solutions Specialist training on workflows",
-      "Final Review of Intake Team and Optimizations",
-      "Launch Intake AI or AI Receptionist (your choice)",
-      "Reactivation Campaign for inactive leads",
-      "Live Ad Campaigns with specialist support"
+    id: "grow",
+    name: "GROW Tier",
+    price: "$27,000",
+    ideal: "Firms that prefer a done-with-you approach while retaining oversight and control.",
+    featured: true,
+    services: [
+      "Access to Amicus Pro platform and automations",
+      "Automation updates and two (2) DWY builds per month",
+      "One (1) Monthly Intake Review",
+      "One (1) Monthly Growth Check-In",
+      "One (1) Monthly Automation Review",
+      "Monthly updated marketing templates & two (2) DFY ads",
+      "Biweekly ad performance reviews and optimization",
+      "One (1) additional marketing channel (e.g., Google Ads or similar)"
     ],
-    outcome: "Your campaigns are live, AI is handling intake 24/7, and leads are converting into consultations.",
-    duration: "30 days"
-  },
-  {
-    id: 3,
-    title: "Month 3: Optimize & Scale",
-    subtitle: "Refine & Prepare",
-    description: "Refine automations, optimize ad performance, and prepare systems and teams for sustainable growth and future scaling.",
-    objectives: [
-      "Bi-Weekly Ad Reporting Calls for performance optimization",
-      "Ad Optimization based on performance data",
-      "Monthly Automation Check-In to ensure workflows function",
-      "Intake Check-In with Attorney for team accountability",
-      "Preparation for ongoing support tiers"
-    ],
-    outcome: "Fully optimized system ready for scale with predictable lead flow and conversion metrics.",
-    duration: "30 days"
-  },
-  {
-    id: 4,
-    title: "Post-90 Day Support",
-    subtitle: "Sustain & Scale",
-    description: "Choose from three ongoing support tiers to maintain, optimize, and scale your Amicus Pro system for continued growth.",
-    objectives: [
-      "Tier 1: DIY with guidance and monthly reviews",
-      "Tier 2: Done-with-you execution and optimization", 
-      "Tier 3: Premium multi-channel scaling and automation"
-    ],
-    outcome: "Sustained growth with the support level that matches your firm's ambitions and resources.",
-    duration: "Ongoing"
+    responsibilities: [
+      "Approve DWY assets within 72 hours to maintain campaign timelines",
+      "Provide clear feedback on automation needs for effective deployment",
+      "Ensure intake team attends reviews and integrates updates",
+      "Allocate and approve ad spend and scaling recommendations",
+      "Arrive at strategy check-ins with updated KPIs (signed cases, revenue, etc.)"
+    ]
   }
 ];
 
-const ImplementationCarousel = (): JSX.Element => {
-  const [activePhase, setActivePhase] = useState(1);
-  const currentPhase = implementationPhases.find(phase => phase.id === activePhase) || implementationPhases[0];
-
+const TierComparison = (): JSX.Element => {
   return (
     <div className="space-y-8">
-      {/* Phase Navigation */}
-      <div className="flex flex-wrap justify-center gap-3">
-        {implementationPhases.map((phase) => (
-          <button
-            key={phase.id}
-            onClick={() => setActivePhase(phase.id)}
-            className={`rounded-full px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] transition ${
-              activePhase === phase.id
-                ? "bg-green-600 text-white shadow-lg shadow-green-600/25"
-                : "border border-white/20 text-slate-300 hover:border-green-400/50 hover:text-green-200"
-            }`}
-          >
-            Month {phase.id === 4 ? "4+" : phase.id}
-          </button>
-        ))}
+      {/* Header */}
+      <div className="text-center space-y-4">
+        <h3 className="font-serif text-3xl font-bold text-white lg:text-4xl">
+          Full AI-Powered Client Acquisition Machine
+        </h3>
+        <p className="text-lg leading-relaxed text-slate-200 max-w-3xl mx-auto">
+          Choose the service tier that best fits your firm's growth goals and operational preferences.
+        </p>
       </div>
 
-      {/* Phase Content */}
-      <div className="grid gap-10 lg:grid-cols-[1fr,1fr] lg:items-center">
-        <div className="space-y-6">
-          <div className="space-y-3">
-            <span className="text-lg font-bold uppercase tracking-[0.3em] text-green-300">
-              {currentPhase.subtitle}
-            </span>
-            <h3 className="font-serif text-4xl font-bold text-white lg:text-5xl">
-              {currentPhase.title}
-            </h3>
-            <p className="text-xl leading-relaxed text-slate-200">
-              {currentPhase.description}
-            </p>
-          </div>
+      {/* Tier Comparison */}
+      <div className="grid gap-8 lg:grid-cols-2">
+        {serviceTiers.map((tier) => (
+          <div
+            key={tier.id}
+            className={`relative rounded-3xl border p-8 transition-all hover:scale-105 ${
+              tier.featured
+                ? "border-green-400/50 bg-gradient-to-br from-green-500/10 to-green-600/5 shadow-xl shadow-green-500/20"
+                : "border-white/20 bg-slate-900/40"
+            }`}
+          >
+            {tier.featured && (
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="rounded-full bg-green-500 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white">
+                  Recommended
+                </span>
+              </div>
+            )}
 
-          <div className="space-y-4">
-            <h4 className="text-lg font-bold text-white">Key Objectives:</h4>
-            <ul className="space-y-3">
-              {currentPhase.objectives.map((objective, index) => (
-                <li key={index} className="flex gap-4">
-                  <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-green-500/25 text-sm font-bold text-green-300">
-                    {index + 1}
-                  </span>
-                  <span className="flex-1 text-lg text-slate-200">{objective}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+            <div className="space-y-6">
+              <div className="space-y-3">
+                <h4 className="font-serif text-2xl font-bold text-white">{tier.name}</h4>
+                <p className="text-lg font-bold text-green-300">Investment: Contact for Pricing</p>
+                <p className="text-base text-slate-200 leading-relaxed">{tier.ideal}</p>
+              </div>
 
-        <div className="space-y-6 rounded-3xl border border-white/10 bg-slate-950/60 p-8">
-          <div className="space-y-4">
-            <h4 className="text-xl font-bold text-white">Expected Outcome</h4>
-            <p className="text-lg leading-relaxed text-slate-200">{currentPhase.outcome}</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="space-y-2">
-              <span className="text-sm uppercase tracking-[0.3em] text-green-300">Timeline</span>
-              <p className="text-2xl font-bold text-white">{currentPhase.duration}</p>
+              <div className="space-y-4">
+                <h5 className="text-lg font-bold text-white">Included Services:</h5>
+                <ul className="space-y-3">
+                  {tier.services.map((service, index) => (
+                    <li key={index} className="flex gap-3">
+                      <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-green-500/25 text-xs font-bold text-green-300">
+                        ✓
+                      </span>
+                      <span className="flex-1 text-base text-slate-200">{service}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {tier.responsibilities && (
+                <div className="space-y-4">
+                  <h5 className="text-lg font-bold text-white">Client Responsibilities:</h5>
+                  <ul className="space-y-3">
+                    {tier.responsibilities.map((responsibility, index) => (
+                      <li key={index} className="flex gap-3">
+                        <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-500/25 text-xs font-bold text-slate-300">
+                          •
+                        </span>
+                        <span className="flex-1 text-sm text-slate-300">{responsibility}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-sm italic text-green-300 mt-4">
+                    Expectation: You provide approvals and direction; we execute and optimize.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
@@ -192,71 +182,71 @@ const CaseStudiesCarousel = (): JSX.Element => {
         </button>
 
         {/* Main Content Card */}
-        <div className="rounded-4xl border border-green-400/30 bg-gradient-to-br from-green-500/10 to-slate-900/80 p-12 shadow-2xl">
-          <div className="text-center space-y-10">
-            <div className="space-y-6">
-              <div className="flex flex-wrap justify-center items-center gap-6">
-                <span className="rounded-full border border-green-400/30 bg-green-500/15 px-6 py-3 text-base font-bold uppercase tracking-[0.2em] text-green-300">
+        <div className="rounded-3xl border border-green-400/30 bg-gradient-to-br from-green-500/10 to-slate-900/80 p-4 sm:p-8 lg:p-12 shadow-2xl">
+          <div className="text-center space-y-6 lg:space-y-10">
+            <div className="space-y-4 lg:space-y-6">
+              <div className="flex flex-wrap justify-center items-center gap-3 lg:gap-6">
+                <span className="rounded-full border border-green-400/30 bg-green-500/15 px-3 py-1.5 text-xs sm:px-6 sm:py-3 sm:text-base font-bold uppercase tracking-[0.2em] text-green-300">
                   {currentCase.practice}
                 </span>
-                <span className="text-xl font-medium text-slate-400">
+                <span className="text-sm sm:text-xl font-medium text-slate-400">
                   {currentCase.location}
                 </span>
               </div>
-              <h3 className="font-serif text-5xl font-bold text-white lg:text-6xl">
+              <h3 className="font-serif text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
                 {currentCase.name}
               </h3>
-              <p className="text-3xl font-bold text-green-300">
+              <p className="text-lg sm:text-2xl lg:text-3xl font-bold text-green-300">
                 {currentCase.headline}
               </p>
             </div>
 
-            <div className="relative rounded-3xl border border-green-400/30 bg-gradient-to-br from-green-500/10 to-green-600/5 p-10 mx-auto max-w-4xl">
-              <div className="absolute -top-6 left-10 text-8xl text-green-400/30">"</div>
-              <blockquote className="relative text-2xl font-medium italic leading-relaxed text-slate-100">
+            <div className="relative rounded-2xl lg:rounded-3xl border border-green-400/30 bg-gradient-to-br from-green-500/10 to-green-600/5 p-4 sm:p-6 lg:p-10 mx-auto max-w-4xl">
+              <div className="absolute -top-3 left-4 text-4xl sm:-top-6 sm:left-10 sm:text-8xl text-green-400/30">"</div>
+              <blockquote className="relative text-base sm:text-lg lg:text-2xl font-medium italic leading-relaxed text-slate-100">
                 {currentCase.quote}
               </blockquote>
-              <div className="mt-8 flex items-center justify-center gap-6">
-                <div className="h-16 w-16 rounded-full bg-green-500/20 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-green-300">
+              <div className="mt-4 sm:mt-8 flex items-center justify-center gap-3 sm:gap-6">
+                <div className="h-10 w-10 sm:h-16 sm:w-16 rounded-full bg-green-500/20 flex items-center justify-center">
+                  <span className="text-sm sm:text-2xl font-bold text-green-300">
                     {currentCase.name.split(' ').map(n => n[0]).join('').slice(0,2)}
                   </span>
                 </div>
                 <div className="text-left">
-                  <p className="text-xl font-bold text-white">{currentCase.name}</p>
-                  <p className="text-lg text-slate-300">{currentCase.practice} • {currentCase.location}</p>
+                  <p className="text-sm sm:text-xl font-bold text-white">{currentCase.name}</p>
+                  <p className="text-xs sm:text-lg text-slate-300">{currentCase.practice} • {currentCase.location}</p>
                 </div>
               </div>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto">
+            <div className="grid gap-3 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
               {currentCase.metrics.map((metric, index) => (
-                <div key={index} className="flex flex-col items-center gap-4 rounded-2xl border border-green-400/20 bg-green-500/5 p-8">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500/20">
-                    <svg className="h-8 w-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div key={index} className="flex flex-col items-center gap-2 sm:gap-4 rounded-xl sm:rounded-2xl border border-green-400/20 bg-green-500/5 p-4 sm:p-8">
+                  <div className="flex h-8 w-8 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-green-500/20">
+                    <svg className="h-5 w-5 sm:h-8 sm:w-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <p className="text-lg font-medium text-slate-200 text-center">{metric}</p>
+                  <p className="text-sm sm:text-lg font-medium text-slate-200 text-center">{metric}</p>
                 </div>
               ))}
             </div>
 
             {/* Case Navigation */}
-            <div className="text-center space-y-6">
-              <p className="text-lg text-slate-400">
+            <div className="text-center space-y-4 lg:space-y-6">
+              <p className="text-sm sm:text-lg text-slate-400">
                 Case {activeCase + 1} of {caseStudies.length}
               </p>
-              <div className="flex justify-center gap-4">
+              <div className="flex justify-center gap-2 sm:gap-4">
                 <button
                   onClick={prevCase}
-                  className="rounded-lg border border-white/20 px-6 py-3 text-base font-medium text-slate-300 transition hover:border-green-400/50 hover:text-green-200"
+                  className="rounded-lg border border-white/20 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-medium text-slate-300 transition hover:border-green-400/50 hover:text-green-200"
                 >
                   Previous
                 </button>
                 <button
                   onClick={nextCase}
-                  className="rounded-lg border border-green-400/40 bg-green-500/10 px-6 py-3 text-base font-medium text-green-300 transition hover:bg-green-500/20"
+                  className="rounded-lg border border-green-400/40 bg-green-500/10 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-medium text-green-300 transition hover:bg-green-500/20"
                 >
                   Next
                 </button>
@@ -274,42 +264,41 @@ const DiscoveryCallPopup = ({ isOpen, onClose }: { isOpen: boolean; onClose: () 
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+      className="fixed inset-0 z-50 flex items-start justify-center bg-black/80 p-4 overflow-y-auto"
       onClick={onClose}
     >
       <div 
-        className="relative w-full max-w-4xl rounded-3xl border border-white/10 bg-slate-950 p-8 shadow-xl"
+        className="relative w-full max-w-4xl rounded-3xl border border-white/10 bg-slate-950 p-4 sm:p-6 shadow-xl my-4 sm:my-8 min-h-fit max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute right-6 top-6 text-2xl text-slate-400 hover:text-white"
+          className="absolute right-4 top-4 z-20 text-2xl text-slate-400 hover:text-white bg-slate-800/80 rounded-full w-8 h-8 flex items-center justify-center"
         >
           ✕
         </button>
         
-        <div className="space-y-6">
+        <div className="space-y-4">
           <div className="text-center">
-            <h3 className="font-serif text-4xl font-bold text-white">
+            <h3 className="font-serif text-2xl lg:text-3xl font-bold text-white">
               Book Your Discovery Call
             </h3>
-            <p className="mt-4 text-xl text-slate-200">
+            <p className="mt-2 text-lg text-slate-200">
               Schedule a 30-minute call to discuss how Amicus Pro can transform your law firm's client acquisition.
             </p>
           </div>
           
-          <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-8">
-            <div className="text-center text-slate-300">
-              {/* Calendar embed */}
-              <div className="rounded-2xl overflow-hidden bg-white min-h-[500px]">
-                <iframe 
-                  src="https://link.legalfunnel.com/widget/booking/2pvKZYafk73gkuCvyoMx" 
-                  style={{width: '100%', border: 'none', overflow: 'hidden', minHeight: '500px'}} 
-                  scrolling="no" 
-                  id="2pvKZYafk73gkuCvyoMx_1762844218215"
-                  title="Book Discovery Call"
-                />
-              </div>
+          <div className="rounded-2xl border border-white/10 bg-white overflow-hidden">
+            {/* Calendar embed */}
+            <div className="w-full h-[500px] sm:h-[600px]">
+              <iframe 
+                src="https://link.legalfunnel.com/widget/booking/2pvKZYafk73gkuCvyoMx" 
+                className="w-full h-full border-none"
+                title="Book Discovery Call"
+                allow="camera; microphone; geolocation"
+                scrolling="yes"
+                style={{overflow: 'auto'}}
+              />
             </div>
           </div>
           
@@ -652,53 +641,53 @@ export const HomePage = (): JSX.Element => {
       </header>
              
       <main className="mx-auto flex max-w-7xl flex-col gap-16 px-6 pb-24 font-sans sm:px-8 lg:px-10 lg:pb-32">
-        <section className="relative overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/60 px-6 pt-6 pb-12 shadow-xl shadow-green-500/10 sm:px-8 lg:px-12 lg:pt-8 lg:pb-16">
+        <section className="relative overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/60 px-4 pt-4 pb-8 shadow-xl shadow-green-500/10 sm:px-6 lg:px-8 lg:pt-6 lg:pb-10">
           {/* Logo at top of hero section */}
-          <div className="flex justify-center mb-6 lg:mb-8">
+          <div className="flex justify-center mb-4 lg:mb-6">
             <img
               src={amicusProLogo}
               alt="Amicus Pro by My Legal Academy"
-              className="h-10 w-auto sm:h-12"
+              className="h-8 w-auto sm:h-10"
             />
           </div>
           <div className="absolute -left-24 top-16 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl" />
           <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl" />
-          <div className="relative z-10 mx-auto max-w-4xl space-y-8 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-emerald-300">
+          <div className="relative z-10 mx-auto max-w-4xl space-y-6 text-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-emerald-300">
               Introducing Amicus Pro by My Legal Academy
             </span>
-            <h1 className="font-serif text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="font-serif text-3xl font-bold leading-[1.05] text-white sm:text-4xl lg:text-5xl xl:text-6xl">
               The AI-Powered Command Center For Modern Law Firms
             </h1>
-            <p className="text-lg leading-[1.6] text-slate-100 sm:text-xl lg:text-2xl">
-              The next evolution of Legal Funnel—now Amicus Pro. An AI-powered platform that unifies client intake, automated follow-ups, intelligent communications, document management, and real-time reporting. Scale your practice without scaling your overhead.
+            <p className="text-base leading-[1.6] text-slate-100 sm:text-lg lg:text-xl">
+              The next evolution of Legal Funnel—now Amicus Pro. An AI-powered platform that unifies client intake, automated follow-ups, intelligent communications, document management, and real-time reporting.
             </p>
-            <ul className="mx-auto max-w-3xl space-y-4 text-left text-base leading-[1.7] text-slate-100 sm:text-lg lg:text-xl">
+            <ul className="mx-auto max-w-3xl space-y-3 text-left text-sm leading-[1.7] text-slate-100 sm:text-base lg:text-lg">
               {[
                 "Convert more signed retainers from existing lead flow with 24/7 AI intake responses.",
                 "Unify partners, operators, and intake teams in one intelligent command center.",
                 "Track true marketing ROI, intake velocity, and revenue forecasts in real time.",
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-green-500/25 text-sm font-bold text-green-300">
+                <li key={item} className="flex items-start gap-2">
+                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-green-500/25 text-xs font-bold text-green-300">
                     ✓
                   </span>
                   <span className="flex-1">{item}</span>
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
               <button
                 onClick={() => setShowDiscoveryPopup(true)}
-                className="rounded-full bg-green-600 px-8 py-4 text-center text-lg font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-green-600/25 transition hover:bg-green-500 hover:shadow-green-500/30 sm:flex-none"
+                className="rounded-full bg-green-600 px-6 py-3 text-center text-base font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-green-600/25 transition hover:bg-green-500 hover:shadow-green-500/30 sm:flex-none"
               >
                 Book Discovery Call
               </button>
               <a
                 href="#implementation"
-                className="rounded-full border-2 border-white/30 px-8 py-4 text-center text-lg font-semibold uppercase tracking-[0.2em] text-white transition hover:border-green-400/70 hover:bg-green-600/10 hover:text-green-200 sm:flex-none"
+                className="rounded-full border-2 border-white/30 px-6 py-3 text-center text-base font-semibold uppercase tracking-[0.2em] text-white transition hover:border-green-400/70 hover:bg-green-600/10 hover:text-green-200 sm:flex-none"
               >
-                View Implementation
+                View Plans
               </a>
             </div>
           </div>
@@ -1004,18 +993,18 @@ export const HomePage = (): JSX.Element => {
         <section id="implementation" className="space-y-12">
           <header className="space-y-6 text-center">
             <span className="text-base font-bold uppercase tracking-[0.3em] text-green-300">
-              90-Day Implementation Program
+              Service Tiers
             </span>
             <h2 className="font-serif text-5xl font-bold text-white sm:text-6xl lg:text-7xl">
-              Your Path to Predictable Growth
+              Choose Your Growth Path
             </h2>
             <p className="mx-auto max-w-4xl text-xl leading-relaxed text-slate-200 sm:text-2xl">
-              The proven 3-month system that transforms law firms into client acquisition machines. Complete intake optimization and live advertising campaigns in 90 days.
+              Select the service tier that aligns with your firm's operational style and growth objectives.
             </p>
           </header>
           
           <div className="overflow-hidden rounded-4xl border border-white/10 bg-slate-900/70 p-8 lg:p-12">
-            <ImplementationCarousel />
+            <TierComparison />
           </div>
           
           <div className="text-center">
@@ -1134,7 +1123,7 @@ export const HomePage = (): JSX.Element => {
               Legal technology solutions for modern law firms.
             </p>
           </div>
-          <div className="flex flex-wrap gap-6 text-xs uppercase tracking-[0.3em]">
+          <div className="flex flex-wrap justify-center lg:justify-end gap-4 lg:gap-6 text-xs uppercase tracking-[0.3em]">
             <a href="#why" className="text-slate-400 transition hover:text-green-200">
               Why Amicus Pro
             </a>
@@ -1142,7 +1131,7 @@ export const HomePage = (): JSX.Element => {
               Features
             </a>
             <a href="#implementation" className="text-slate-400 transition hover:text-green-200">
-              Implementation
+              Plans
             </a>
             <a href="/privacy-policy" className="text-slate-400 transition hover:text-green-200">
               Privacy Policy

@@ -590,6 +590,7 @@ export const HomePage = (): JSX.Element => {
   const [openFaq, setOpenFaq] = useState<string | null>(faqItems[0].question);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showDiscoveryPopup, setShowDiscoveryPopup] = useState(false);
+  const [rocketPosition, setRocketPosition] = useState(100);
 
   const activeTabContent =
     productTabs.find((tab) => tab.key === activeTab) ?? productTabs[0];
@@ -637,8 +638,35 @@ export const HomePage = (): JSX.Element => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Rocket animation based on scroll
+  useEffect(() => {
+    const handleRocketScroll = () => {
+      const scrolled = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollProgress = Math.min(scrolled / maxScroll, 1);
+      // Rocket starts at bottom (100%) and flies up to top (0%) as we scroll down
+      const rocketPos = 100 - (scrollProgress * 100);
+      setRocketPosition(rocketPos);
+    };
+    
+    window.addEventListener("scroll", handleRocketScroll);
+    return () => window.removeEventListener("scroll", handleRocketScroll);
+  }, []);
+
   return (
     <div className="min-h-screen scroll-smooth bg-slate-950 text-slate-100">
+      {/* Flying Rocket Animation */}
+      <div 
+        className="fixed right-4 z-30 text-2xl transition-all duration-300 ease-out pointer-events-none"
+        style={{ 
+          top: `${rocketPosition}%`,
+          transform: `translateY(-50%) rotate(-45deg)`,
+          opacity: rocketPosition < 95 ? 1 : 0
+        }}
+      >
+        🚀
+      </div>
+      
       <div className="pointer-events-none fixed inset-0 -z-10">
         <div className="absolute inset-0 opacity-60 mix-blend-screen" style={{ background: "radial-gradient(circle at top left, rgba(16, 185, 129, 0.18), transparent 45%), radial-gradient(circle at bottom right, rgba(52, 211, 153, 0.16), transparent 50%)" }} />
       </div>

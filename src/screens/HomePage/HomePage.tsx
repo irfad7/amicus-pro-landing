@@ -13,15 +13,15 @@ const serviceTiers = [
   {
     id: "core",
     name: "CORE Tier",
-    price: "$13,500",
     ideal: "Firms that want to maintain their systems and handle implementation internally with guidance.",
     featured: false,
     services: [
+      "**Full AI-Powered Client Acquisition Machine Buildout** - Complete system setup and maintenance support",
       "Access to Amicus Pro platform and existing automations",
       "Ongoing automation updates, as needed",
-      "One (1) Monthly Intake Review",
-      "One (1) Monthly Growth Check-In",
-      "One (1) Monthly Automation Review",
+      "Monthly Intake Review",
+      "Monthly Growth Check-In",
+      "Monthly Automation Review",
       "DIY monthly marketing templates and creative assets",
       "Biweekly ad reporting and performance calls"
     ]
@@ -29,18 +29,18 @@ const serviceTiers = [
   {
     id: "grow",
     name: "GROW Tier",
-    price: "$27,000",
     ideal: "Firms that prefer a done-with-you approach while retaining oversight and control.",
     featured: true,
     services: [
+      "**Full AI-Powered Client Acquisition Machine Buildout** - Complete done-with-you implementation and ongoing optimization",
       "Access to Amicus Pro platform and automations",
-      "Automation updates and two (2) DWY builds per month",
-      "One (1) Monthly Intake Review",
-      "One (1) Monthly Growth Check-In",
-      "One (1) Monthly Automation Review",
-      "Monthly updated marketing templates & two (2) DFY ads",
+      "Automation updates and two DWY builds per month",
+      "Monthly Intake Review",
+      "Monthly Growth Check-In",
+      "Monthly Automation Review",
+      "Monthly updated marketing templates & two DFY ads",
       "Biweekly ad performance reviews and optimization",
-      "One (1) additional marketing channel (e.g., Google Ads or similar)"
+      "Additional marketing channel (e.g., Google Ads or similar)"
     ],
     responsibilities: [
       "Approve DWY assets within 72 hours to maintain campaign timelines",
@@ -51,6 +51,26 @@ const serviceTiers = [
     ]
   }
 ];
+
+// Helper function to render text with bold formatting
+const renderTextWithBold = (text: string): JSX.Element => {
+  const parts = text.split(/(\*\*.*?\*\*)/);
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+          const boldText = part.slice(2, -2);
+          return (
+            <strong key={index} className="font-bold text-white">
+              {boldText}
+            </strong>
+          );
+        }
+        return <span key={index}>{part}</span>;
+      })}
+    </>
+  );
+};
 
 const TierComparison = (): JSX.Element => {
   return (
@@ -87,7 +107,6 @@ const TierComparison = (): JSX.Element => {
             <div className="space-y-6">
               <div className="space-y-3">
                 <h4 className="font-serif text-2xl font-bold text-white">{tier.name}</h4>
-                <p className="text-lg font-bold text-green-300">Investment: Contact for Pricing</p>
                 <p className="text-base text-slate-200 leading-relaxed">{tier.ideal}</p>
               </div>
 
@@ -99,7 +118,9 @@ const TierComparison = (): JSX.Element => {
                       <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-green-500/25 text-xs font-bold text-green-300">
                         ✓
                       </span>
-                      <span className="flex-1 text-base text-slate-200">{service}</span>
+                      <span className="flex-1 text-base text-slate-200">
+                        {renderTextWithBold(service)}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -679,13 +700,13 @@ export const HomePage = (): JSX.Element => {
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
               <button
                 onClick={() => setShowDiscoveryPopup(true)}
-                className="rounded-full bg-green-600 px-6 py-3 text-center text-base font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-green-600/25 transition hover:bg-green-500 hover:shadow-green-500/30 sm:flex-none"
+                className="rounded-2xl bg-green-600 px-6 py-3 text-center text-base font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-green-600/25 transition hover:bg-green-500 hover:shadow-green-500/30 sm:flex-none"
               >
                 Book Discovery Call
               </button>
               <a
                 href="#implementation"
-                className="rounded-full border-2 border-white/30 px-6 py-3 text-center text-base font-semibold uppercase tracking-[0.2em] text-white transition hover:border-green-400/70 hover:bg-green-600/10 hover:text-green-200 sm:flex-none"
+                className="rounded-2xl border-2 border-white/30 px-6 py-3 text-center text-base font-semibold uppercase tracking-[0.2em] text-white transition hover:border-green-400/70 hover:bg-green-600/10 hover:text-green-200 sm:flex-none"
               >
                 View Plans
               </a>
@@ -943,7 +964,7 @@ export const HomePage = (): JSX.Element => {
           <div className="flex justify-center">
             <button
               onClick={() => setShowDiscoveryPopup(true)}
-              className="rounded-full bg-green-600 px-10 py-4 text-lg font-bold uppercase tracking-[0.25em] text-white shadow-lg shadow-green-600/25 transition hover:bg-green-500"
+              className="rounded-2xl bg-green-600 px-10 py-4 text-lg font-bold uppercase tracking-[0.25em] text-white shadow-lg shadow-green-600/25 transition hover:bg-green-500"
             >
               Book Discovery Call
             </button>
@@ -1010,7 +1031,7 @@ export const HomePage = (): JSX.Element => {
           <div className="text-center">
             <button
               onClick={() => setShowDiscoveryPopup(true)}
-              className="inline-flex items-center gap-3 rounded-full bg-green-600 px-12 py-6 text-xl font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-green-600/25 transition hover:bg-green-500 hover:shadow-green-500/30"
+              className="inline-flex items-center gap-3 rounded-2xl bg-green-600 px-12 py-6 text-xl font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-green-600/25 transition hover:bg-green-500 hover:shadow-green-500/30"
             >
               Book Discovery Call →
             </button>
@@ -1084,13 +1105,15 @@ export const HomePage = (): JSX.Element => {
             <p className="text-2xl leading-relaxed text-slate-100 sm:text-3xl">
               Join 1,260+ law firms using My Legal Academy's proven systems. Book a discovery call to see how Amicus Pro can transform your practice in 90 days.
             </p>
-            <div className="space-y-6">
-              <button
-                onClick={() => setShowDiscoveryPopup(true)}
-                className="rounded-full bg-white px-16 py-6 text-xl font-bold uppercase tracking-[0.25em] text-slate-950 shadow-xl transition hover:bg-green-50 hover:shadow-2xl"
-              >
-                Book Discovery Call Now
-              </button>
+            <div className="space-y-6 text-center">
+              <div className="flex justify-center">
+                <button
+                  onClick={() => setShowDiscoveryPopup(true)}
+                  className="rounded-2xl bg-white px-16 py-6 text-xl font-bold uppercase tracking-[0.25em] text-slate-950 shadow-xl transition hover:bg-green-50 hover:shadow-2xl"
+                >
+                  Book Discovery Call Now
+                </button>
+              </div>
               <div className="grid gap-6 text-center sm:grid-cols-3">
                 <div className="space-y-2">
                   <div className="text-4xl">🚀</div>
@@ -1115,7 +1138,7 @@ export const HomePage = (): JSX.Element => {
 
       <footer className="border-t border-white/10 bg-slate-950/90 py-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 text-xs text-slate-500 lg:flex-row lg:items-center lg:justify-between lg:px-0">
-          <div className="space-y-2">
+          <div className="space-y-2 text-center lg:text-left">
             <p>
               © {new Date().getFullYear()} Amicus Pro by My Legal Academy. All rights reserved.
             </p>
@@ -1123,7 +1146,7 @@ export const HomePage = (): JSX.Element => {
               Legal technology solutions for modern law firms.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center lg:justify-end gap-4 lg:gap-6 text-xs uppercase tracking-[0.3em]">
+          <div className="flex flex-wrap justify-center lg:justify-end gap-4 lg:gap-6 text-xs uppercase tracking-[0.3em] text-center lg:text-right">
             <a href="#why" className="text-slate-400 transition hover:text-green-200">
               Why Amicus Pro
             </a>

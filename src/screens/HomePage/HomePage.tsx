@@ -1028,7 +1028,7 @@ export const HomePage = (): JSX.Element => {
             <div className="grid gap-8 pt-12 md:grid-cols-3">
               {[
                 "10+ years devoted exclusively to law firm growth.",
-                "1,260+ proven systems launched across practice areas.",
+                "1,300+ proven systems launched across practice areas.",
                 "Private community, coaching, and lifetime optimization.",
               ].map((item) => (
                 <div key={item} className="rounded-3xl border border-green-400/20 bg-green-500/5 p-8 transition hover:border-green-400/40 hover:bg-green-500/10">
@@ -1131,7 +1131,7 @@ export const HomePage = (): JSX.Element => {
               Ready to Scale Your Law Firm?
             </h2>
             <p className="text-2xl leading-relaxed text-slate-100 sm:text-3xl">
-              Join 1,260+ law firms using My Legal Academy's proven systems. Book a discovery call to see how Amicus Pro can transform your practice in 90 days.
+              Join 1,300+ law firms using My Legal Academy's proven systems. Book a discovery call to see how Amicus Pro can transform your practice in 90 days.
             </p>
             <div className="space-y-6 text-center">
               <div className="flex justify-center">
@@ -1156,7 +1156,7 @@ export const HomePage = (): JSX.Element => {
                 <div className="space-y-2">
                   <div className="text-4xl">🎯</div>
                   <p className="font-bold text-white">Guaranteed Results</p>
-                  <p className="text-base text-slate-300">Trusted by 1,260+ firms</p>
+                  <p className="text-base text-slate-300">Trusted by 1,300+ firms</p>
                 </div>
               </div>
             </div>

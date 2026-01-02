@@ -540,9 +540,9 @@ const caseStudies = [
 
 const faqItems = [
   {
-    question: "How is Amicus Pro different from the old Legal Funnel platform?",
+    question: "What makes Amicus Pro different from traditional law firm software?",
     answer:
-      "Amicus Pro keeps the proven playbooks from Legal Funnel but rebuilds the entire experience as one AI-powered command center. Intake, follow-up, communication, reporting, and workflow now live in a single system optimized specifically for law firms.",
+      "Amicus Pro is a unified AI-powered command center built specifically for law firm growth. Unlike traditional tools that force you to juggle multiple platforms, we bring intake, follow-up, communication, document management, and real-time reporting into one intelligent system. Backed by My Legal Academy's proven playbooks, every feature is designed to help law firms convert more leads and scale efficiently.",
   },
   {
     question: "Will Amicus Pro integrate with my current practice management software?",
@@ -709,7 +709,7 @@ export const HomePage = (): JSX.Element => {
               The AI-Powered Command Center For Modern Law Firms
             </h1>
             <p className="text-base leading-[1.6] text-slate-100 sm:text-lg lg:text-xl">
-              The next evolution of Legal Funnel—now Amicus Pro. An AI-powered platform that unifies client intake, automated follow-ups, intelligent communications, document management, and real-time reporting.
+              Built by My Legal Academy, Amicus Pro is the AI-powered platform that unifies client intake, automated follow-ups, intelligent communications, document management, and real-time reporting—all in one command center designed specifically for modern law firms.
             </p>
             <ul className="mx-auto max-w-3xl space-y-3 text-left text-sm leading-[1.7] text-slate-100 sm:text-base lg:text-lg">
               {[
@@ -814,7 +814,7 @@ export const HomePage = (): JSX.Element => {
               Meet Amicus Pro
             </h2>
             <p className="mx-auto max-w-4xl text-xl leading-relaxed text-slate-200 sm:text-2xl">
-              The evolution of Legal Funnel—an AI-powered operating system that packages My Legal Academy's battle-tested intake and growth playbooks into one premium experience for modern law firms.
+              An AI-powered operating system that packages My Legal Academy's battle-tested intake and growth playbooks into one premium experience. Built specifically for modern law firms ready to convert more leads, scale operations, and dominate their markets.
             </p>
           </header>
           <div className="grid gap-6 md:grid-cols-2">

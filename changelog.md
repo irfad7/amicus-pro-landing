@@ -1,6 +1,20 @@
 # Amicus Pro Landing Page Changelog
 
-## Rebranding from Legal Funnel to Amicus Pro
+## Clean Slate Brand Positioning [Date: 2026-01-03]
+
+**Objective:** Remove all references to "Legal Funnel" to establish Amicus Pro as a standalone brand with its own identity.
+
+**Changes Made:**
+- **FAQ Section**: Replaced "How is Amicus Pro different from the old Legal Funnel platform?" with "What makes Amicus Pro different from traditional law firm software?" - focuses on unique value proposition without comparing to predecessor
+- **Hero Section**: Removed "The next evolution of Legal Funnel" language and replaced with "Built by My Legal Academy" positioning to emphasize current backing and capabilities
+- **About Section**: Eliminated "evolution of Legal Funnel" framing and positioned as purpose-built solution for modern law firms
+- **Copy Strategy**: All new copy focuses on what Amicus Pro IS today rather than what it evolved from, maintaining natural flow and professional tone
+
+**Rationale:** User feedback indicated that Legal Funnel references were causing confusion. Clean slate approach positions Amicus Pro as a fresh, standalone AI-powered platform backed by My Legal Academy's proven strategies.
+
+---
+
+## Historical Context: Rebranding from Legal Funnel to Amicus Pro
 
 ### Changes Made
 
